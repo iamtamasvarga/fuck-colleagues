@@ -15,4 +15,6 @@ Copy-Item -Path ".\startup_script.vbs" -Destination $startUpFolder
 
 $vbsPath = $startUpFolder + "\startup_script.vbs"
 
+(Get-Content $vbsPath).Replace('[PS_SCRIPT]', $pornSoundScriptPath) | Set-Content $vbsPath
+
 Cscript.exe $vbsPath //nologo
