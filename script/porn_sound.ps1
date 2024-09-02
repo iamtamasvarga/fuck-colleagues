@@ -76,7 +76,7 @@ function Convert-HoursToSeconds {
 
 function Play-Porn-Sound {
     $SoundEffect = New-Object System.Media.SoundPlayer
-    $SoundEffect.SoundLocation = [PORN_SOUND]
+    $SoundEffect.SoundLocation = "[PORN_SOUND]"
     $SoundEffect.PlaySync()
 }
 
