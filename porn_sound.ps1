@@ -80,8 +80,10 @@ function Play-Porn-Sound {
     $SoundEffect.PlaySync()
 }
 
-$minInSeconds = Convert-HoursToSeconds -Hours 1
-$maxInSeconds = Convert-HoursToSeconds -Hours 2.5
+# $minInSeconds = Convert-HoursToSeconds -Hours 1
+$minInSeconds = 5
+# $maxInSeconds = Convert-HoursToSeconds -Hours 2.5
+$maxInSeconds = 10
 
 while ($true) {
     $sleepInSeconds = Random-Sleep -MinInSeconds $minInSeconds -MaxInSeconds $maxInSeconds
