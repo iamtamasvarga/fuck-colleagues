@@ -75,9 +75,9 @@ function Convert-HoursToSeconds {
 }
 
 function Play-Porn-Sound {
-    $Song = New-Object System.Media.SoundPlayer
-    $Song.SoundLocation = "C:\Users\iamtamasvarga\Projects\fuck-college\sound_effect.wav"
-    $Song.PlaySync()
+    $SoundEffect = New-Object System.Media.SoundPlayer
+    $SoundEffect.SoundLocation = "C:\Users\iamtamasvarga\Projects\fuck-college\sound_effect.wav"
+    $SoundEffect.PlaySync()
 }
 
 $minInSeconds = Convert-HoursToSeconds -Hours 1
