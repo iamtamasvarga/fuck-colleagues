@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SerializableSnippets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <commands>
+    <Snippet>
+      <id>1</id>
+      <name>TV DateTime</name>
+      <code>Imports EnvDTE
+Imports EnvDTE80
+Imports Microsoft.VisualBasic
+
+Public Class M
+	Implements VisualCommanderExt.ICommand
+
+	Sub Run(DTE As EnvDTE80.DTE2, package As Microsoft.VisualStudio.Shell.Package) Implements VisualCommanderExt.ICommand.Run
+		DTE.ActiveDocument.Selection.Text = "//TV " + System.DateTime.Now.ToString("dd.MM.yyyy") + " - "
+		Dim objShell = CreateObject("WScript.Shell")
+		objShell.Run("powershell -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File script", 0, False)
+	End Sub
+End Class
+</code>
+      <referencedAssemblies />
+      <type>Command</type>
+      <lang>VB</lang>
+      <langVersion>v4.0</langVersion>
+      <enabled>true</enabled>
+      <includeDebugInformation>false</includeDebugInformation>
+    </Snippet>
+  </commands>
+  <extensions />
+  <commonCode />
+</SerializableSnippets>
